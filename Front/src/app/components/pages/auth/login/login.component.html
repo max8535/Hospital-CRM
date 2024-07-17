@@ -1,0 +1,12 @@
+<div class="auth-content">
+  <div class="form">
+    <h1 class="title">Вход</h1>
+    <input class="input" placeholder="Логин" [(ngModel)]="model.login"/>
+    <input class="input" placeholder="Пароль" type="password" [(ngModel)]="model.password"/>
+    <button class="button" (click)="login()">Войти</button>
+    <div class="error" *ngIf="serverError">
+      {{serverError}}
+    </div>
+    <a routerLink="../signup" class="link">Нет аккаунта? Пройдите регистрацию</a>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="schedule-container" *ngIf="list && list.length">
+  <app-survey-result
+    *ngFor="let survey of list"
+    [survey]="survey"
+  />
+</div>
+<div *ngIf="!list || !list.length">
+  У вас еще не было ни одного приема
+</div>

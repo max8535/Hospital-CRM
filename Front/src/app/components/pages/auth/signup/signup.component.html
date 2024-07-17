@@ -1,0 +1,18 @@
+<div class="auth-content">
+  <div class="form" style="padding-top: 120px">
+    <h1 class="title">Регистрация пациента</h1>
+    <input class="input" placeholder="Логин" [(ngModel)]="model.login"/>
+    <input class="input" placeholder="Пароль" type="password" [(ngModel)]="model.password"/>
+    <input class="input" placeholder="Повторите пароль" type="password" [(ngModel)]="model.repeatedPassword"/>
+    <input class="input" placeholder="Имя" [(ngModel)]="model.firstName"/>
+    <input class="input" placeholder="Фамилия" [(ngModel)]="model.lastName"/>
+    <input class="input" placeholder="Возраст" [(ngModel)]="model.age"/>
+    <input class="input" placeholder="Номер страхового полюса" [(ngModel)]="model.healthInsuranceNumber"/>
+    <button class="button" (click)="signUp()">Зарегистрироваться</button>
+    <div class="error" *ngIf="serverError">
+      {{serverError}}
+    </div>
+    <a routerLink="../login" class="link">Есть аккаунт? Войдите</a>
+    <a routerLink="../signup-doctor" class="link">Вы доктор? Пройдите регистрацию</a>
+  </div>
+</div>

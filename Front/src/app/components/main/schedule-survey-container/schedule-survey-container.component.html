@@ -1,0 +1,9 @@
+<div class="schedule-container" *ngIf="list && list.length">
+  <app-schedule-survey
+    *ngFor="let schedule of list" [schedule]="schedule"
+    (updateSchedule)="getScheduleSurveyAll()"
+  />
+</div>
+<div *ngIf="!list || !list.length">
+  У вас еще не было ни одной записи
+</div>

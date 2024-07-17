@@ -1,0 +1,10 @@
+<div>
+  <div class="container">
+    <div class="main-header" *ngIf="isPatient">
+      <a routerLink="schedule/create">Записаться на прием</a>
+    </div>
+    <app-schedule-survey-container/>
+    <div class="divider"></div>
+    <app-survey-result-container/>
+  </div>
+</div>

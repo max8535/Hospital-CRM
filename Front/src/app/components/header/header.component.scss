@@ -1,0 +1,29 @@
+.header {
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+  margin-bottom: 15px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user-info {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    gap: 25px;
+  }
+
+  .logout {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .user-names {
+    span {
+      font-weight: 700;
+    }
+  }
+}

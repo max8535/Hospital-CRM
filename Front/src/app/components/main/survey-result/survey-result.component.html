@@ -1,0 +1,27 @@
+<div class="schedule">
+  <h1>Результат приема</h1>
+  <div class="record">
+    <span>Дата и время: </span>
+    {{ survey.scheduleSurvey.date | date:'dd.MM.YYYY HH:mm'}}
+  </div>
+  <div class="record">
+    <span>Результат: </span>
+    {{ survey.title }}
+  </div>
+  <div class="record">
+    <span>Рекомендации: </span>
+    {{ survey.description }}
+  </div>
+  <div class="record">
+    <span>Доктор: </span>
+    {{ survey.scheduleSurvey.doctor.user.lastName }} {{ survey.scheduleSurvey.doctor.user.firstName }}
+  </div>
+  <div class="record">
+    <span>Пациент: </span>
+    {{ survey.scheduleSurvey.patient.user.lastName }} {{ survey.scheduleSurvey.patient.user.firstName }}
+  </div>
+  <div class="record">
+    <span>Спецификация: </span>
+    {{ survey.scheduleSurvey.doctor.specification }}
+  </div>
+</div>

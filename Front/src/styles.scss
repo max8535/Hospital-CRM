@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "styles/reset";
+//@import "src/styles/snack-bar.styles";
+//@import "src/styles/ui/ui-components.styles";
+
+mat-icon {
+  font-family: 'Material Icons', serif !important;
+
+  &:before, &:after {
+    font-family: 'Material Icons', serif !important;
+  }
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.user-login {
+  color: gray;
+  font-weight: 500;
+}
+
+.user-login, .user-name {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.app-loading {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 300px;
+}

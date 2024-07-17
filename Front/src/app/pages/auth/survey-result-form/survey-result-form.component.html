@@ -1,0 +1,18 @@
+<div>
+  <div class="container">
+    <h1 style="margin-bottom: 20px;">Результат приема</h1>
+    <app-schedule-survey
+      *ngIf="model.scheduleSurvey" [schedule]="model.scheduleSurvey" [hideButtons]="true"></app-schedule-survey>
+    <div class="form">
+      <label>
+        Заголовок:
+        <input [(ngModel)]="model.title"/>
+      </label>
+      <label>
+        Результат приема:
+        <textarea [(ngModel)]="model.description"></textarea>
+      </label>
+      <button (click)="createSurveyResult()">Результировать прием</button>
+    </div>
+  </div>
+</div>

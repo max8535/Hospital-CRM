@@ -1,0 +1,31 @@
+<div class="schedule">
+  <h1>Запись</h1>
+  <div class="record">
+    <span>Дата и время: </span>
+    {{schedule.date | date:'dd.MM.YYYY HH:mm'}}
+  </div>
+  <div class="record">
+    <span>Статус: </span>
+    {{statusText }}
+  </div>
+  <div class="record">
+    <span>Доктор: </span>
+    {{ schedule.doctor.user.lastName }} {{ schedule.doctor.user.firstName }}
+  </div>
+  <div class="record">
+    <span>Пациент: </span>
+    {{ schedule.patient.user.lastName }} {{ schedule.patient.user.firstName }}
+  </div>
+  <div class="record">
+    <span>Спецификация: </span>
+    {{ schedule.doctor.specification }}
+  </div>
+  <div class="record">
+    <span>Кабинет: </span>
+    {{ schedule.doctor.cabinet }}
+  </div>
+  <div class="buttons" *ngIf="!hideButtons">
+    <button (click)="cancel()" *ngIf="canCancel">Отменить</button>
+    <button *ngIf="canApprove" (click)="approve()">Написать результат приема</button>
+  </div>
+</div>

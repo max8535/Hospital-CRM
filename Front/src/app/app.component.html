@@ -1,0 +1,7 @@
+<div class="app" *ngIf="!loading" [ngClass]="{'auth': isAuthPage}">
+  <app-header *ngIf="!isAuthPage"></app-header>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<div class="app-loading" *ngIf="loading">Загрузка...</div>

@@ -1,0 +1,23 @@
+<div>
+  <div class="container">
+    <h1 style="margin-bottom: 20px;">Создание записи на прием</h1>
+    <div class="form">
+      <label>
+        Дата и время записи:
+        <input [(ngModel)]="model.date"/>
+      </label>
+      <label>
+        Доктор:
+        <select [(ngModel)]="model.doctor">
+          <option *ngFor="let doctor of doctors" [value]="doctor?.id">
+            <div *ngIf="doctor">
+              {{doctor.specification}} | {{doctor.user.lastName}} {{doctor.user.firstName}}
+            </div>
+            <div *ngIf="!doctor">Не выбрано</div>
+          </option>
+        </select>
+      </label>
+      <button (click)="createSchedule()">Создать</button>
+    </div>
+  </div>
+</div>
